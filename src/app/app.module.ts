@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import {CaratulaPage} from "../pages/caratula/caratula";
 import {BiografiaPage} from "../pages/biografia/biografia";
 import {ReviewPage} from "../pages/review/review";
+import {TracksPage} from "../pages/tracks/tracks";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {ReviewPage} from "../pages/review/review";
     HomePage,
     CaratulaPage,
     BiografiaPage,
-    ReviewPage
+    ReviewPage,
+    TracksPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import {ReviewPage} from "../pages/review/review";
     HomePage,
     CaratulaPage,
     BiografiaPage,
-    ReviewPage
+    ReviewPage,
+    TracksPage
   ],
   providers: [
     StatusBar,

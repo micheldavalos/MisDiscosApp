@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import {CaratulaPage} from "../caratula/caratula";
 import {BiografiaPage} from "../biografia/biografia";
 import {ReviewPage} from "../review/review";
+import {TracksPage} from "../tracks/tracks";
 
 @Component({
   selector: 'page-home',
@@ -16,6 +17,8 @@ export class HomePage {
 
 
   review = ReviewPage;
+
+  tracks = TracksPage;
 
   constructor(public navCtrl: NavController) {
 
@@ -31,6 +34,10 @@ export class HomePage {
 
   clickAlbum() {
     this.navCtrl.push(this.review);
+  }
+
+  clickTracks() {
+    this.navCtrl.push(this.tracks);
   }
 
 }
