@@ -7,21 +7,16 @@
 </ion-header>
 
 <ion-content padding style="background-color: #333951">
-  <ion-card style="border-radius: 10px" >
-    <ion-item style="background-color: #DB2B39">
+  <ion-card style="border-radius: 10px" *ngFor="let disco of discos">
+    <ion-item [ngStyle]="{'background-color': disco.color}">
       <ion-col item-start>
-        <img src="../assets/toTheBone.jpg" (click)="clickCaratula1()">
+        <img [src]=disco.imagen (click)="this[disco.funcion]()">
       </ion-col>
-      <h2 (click)="clickArtista()">Steven Wilson</h2>
-      <p (click)="clickTracks()">To The Bone</p>
-      <p>2017</p>
+      <h2 (click)="clickArtista()">{{disco.artista}}</h2>
+      <p (click)="clickTracks()">{{disco.album}}</p>
+      <p>{{disco.lanzamiento}}</p>
       <ion-row (click)="clickAlbum()">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star" color="light"></ion-icon>
-
+        <ion-icon name="star" *ngFor="let v of disco.valoracion"></ion-icon>
       </ion-row>
       <ion-row>
         <ion-icon name="play" color="primary" style="font-size: 40px"></ion-icon>
@@ -30,7 +25,7 @@
 
   </ion-card>
 
-  <ion-card style="border-radius: 10px" >
+  <!--<ion-card style="border-radius: 10px" >
     <ion-item style="background-color: #F5F5F5" >
       <ion-col item-start>
         <img src="../assets/astrix.jpg" (click)="clickCaratula1()">
@@ -97,5 +92,5 @@
       </ion-row>
     </ion-item>
 
-  </ion-card>
+  </ion-card>-->
 </ion-content>
