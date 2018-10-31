@@ -10,7 +10,7 @@
   <ion-card style="border-radius: 10px" *ngFor="let disco of discos">
     <ion-item [ngStyle]="{'background-color': disco.color}">
       <ion-col item-start>
-        <img [src]=disco.imagen (click)="this[disco.funcion]()">
+        <img [src]=disco.imagen (click)="clickCover(disco.id)">
       </ion-col>
       <h2 (click)="clickArtista()">{{disco.artista}}</h2>
       <p (click)="clickTracks()">{{disco.album}}</p>
